@@ -104,4 +104,4 @@ while len(oyuncusayisi)!=1:
     if v == len(oyuncusayisi):
         v = 0
     
-   
+   print("try")
