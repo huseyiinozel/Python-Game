@@ -73,7 +73,7 @@ while True:
 v = 0
 while len(oyuncusayisi)!=1:
 
-    print("{}. oyuncu tahminini girsin:" .format(oyuncuad[v]))
+    print("\n {}. oyuncu tahminini girsin:" .format(oyuncuad[v]))
     print("Soyleyebilecegi sayilar :")
     print(liste)
     gir =int(input("sayi:"))
@@ -88,20 +88,24 @@ while len(oyuncusayisi)!=1:
 
 
             print("{} sayisini {}. oyuncu tutmustu. {}. oyuncu oyundan cikabilirsiniz".format(gir,oyuncuad[h],oyuncuad[h]))
-
             oyuncusayisi.pop(h)
+            oyuncuad.pop(h)
             print("devam etmek icin bir tusa basiniz")
 
             wait()
             
             os.system("cls")
-
+            
+    
             break
             
 
-    v+=1
-
-    if v == len(oyuncusayisi):
+    if v+1 == len(oyuncusayisi)  :
         v = 0
+
+    else:
+        print("Bu sayiyi kimse tutmamiş.Tahmin etmeye devam edin")
+        v+=1      
     
-   print("try")
+
+print("Oyun bitmiştir kaybeden {} olmustur".format(oyuncuad[0]))
